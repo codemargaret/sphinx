@@ -5,9 +5,9 @@ also_reload('lib/**/*.rb')
 require('./lib/sphinx')
 
 sphinx = Sphinx.new("placeholder", "placeholder")
-sphinx.pick_question
 
 get('/') do
+  sphinx.pick_question
   @question = sphinx.question
   erb(:input)
 end

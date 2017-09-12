@@ -6,7 +6,7 @@ class Sphinx
     @q_and_a = {
       "What walks on four legs in the morning, two legs in the afternoon, and three legs in the evening?" => ["person","human","man"],
 
-      "To you, rude would I never be, Though I flag my tongue for all to see." => ["dog"],
+      "To you, rude would I never be, Though I flag my tongue for all to see." => ["dog", "canine"],
 
       "Always wax, yet always wane: I melt, succumbéd to the flame. Lighting darkness, with fate unblest, I soon devolve to shapeless mess." => ["candle"],
 
