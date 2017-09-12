@@ -1,7 +1,7 @@
 class Sphinx
-  attr_reader :answer, :question, :q_and_a
+  attr_accessor :answer, :question, :q_and_a
   def initialize(question, answer)
-    @answer = answer.downcase.gsub(/\W+/, '')
+    @answer = answer.downcase.gsub(/[^a-zA-Z]/, '')
     @question = question
     @q_and_a = {
       "What walks on four legs in the morning, two legs in the afternoon, and three legs in the evening?" => ["person","human","man"],
@@ -17,10 +17,10 @@ class Sphinx
   end
 
   def riddle?
-    q_and_a.fetch(question).include?(answer)
+    q_and_a.fetch(question[0]).include?(answer[0]) & q_and_a.fetch(question[1]).include?(answer[1])
   end
 
   def pick_question
-    q_and_a.keys.sample(2)
+    @question = q_and_a.keys.sample(2)
   end
 end
