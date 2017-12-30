@@ -1,7 +1,8 @@
 <h1>I am the Sphinx!</h1>
 
 <form action="/output" method="post">
-  <h2>Your first riddle is: <%= @question[0] %></h2>
+  <h2>Your first riddle is: </h2>
+  <p id="question1"><%= @question[0] %></p>
   <label for="answer1">Type your answer to the first riddle</label>
   <input type="text" name="answer1">
 
